@@ -29,15 +29,27 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack(spacing: 10) {
-            Text(scannedCode)
-            Button("Scan Qr") {
-                self.isPresentingScanner = true
+        TabView {
+            NavigationView {
+                VStack {
+                    Text(scannedCode)
+                    Button("Scan Qr") {
+                        self.isPresentingScanner = true
+                    }
+                    .sheet(isPresented: $isPresentingScanner) {
+                        self.scannedSheet
+                        }
+                }.navigationTitle("Отсканируй QR код")
+
+                
             }
-            .sheet(isPresented: $isPresentingScanner) {
-                self.scannedSheet
+            
+            .tabItem {
+                Image(systemName: "qrcode.viewfinder")
+                Text("Scan")
             }
         }
+        
     }
 }
 
