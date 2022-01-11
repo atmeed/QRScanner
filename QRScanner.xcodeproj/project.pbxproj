@@ -11,6 +11,7 @@
 		A5AA332F278DD1440046B36C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA332E278DD1440046B36C /* ContentView.swift */; };
 		A5AA3331278DD1460046B36C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AA3330278DD1460046B36C /* Assets.xcassets */; };
 		A5AA3334278DD1460046B36C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AA3333278DD1460046B36C /* Preview Assets.xcassets */; };
+		A5AA333C278DD2010046B36C /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A5AA333B278DD2010046B36C /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5AA333C278DD2010046B36C /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = QRScanner;
+			packageProductDependencies = (
+				A5AA333B278DD2010046B36C /* CodeScanner */,
+			);
 			productName = QRScanner;
 			productReference = A5AA3329278DD1440046B36C /* QRScanner.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = A5AA3320278DD1440046B36C;
+			packageReferences = (
+				A5AA333A278DD2010046B36C /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = A5AA332A278DD1440046B36C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -272,11 +280,13 @@
 				DEVELOPMENT_TEAM = Z9WSPRMW9Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to camera to scan QR";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,11 +311,13 @@
 				DEVELOPMENT_TEAM = Z9WSPRMW9Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to camera to scan QR";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5AA333A278DD2010046B36C /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5AA333B278DD2010046B36C /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5AA333A278DD2010046B36C /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A5AA3321278DD1440046B36C /* Project object */;
 }
