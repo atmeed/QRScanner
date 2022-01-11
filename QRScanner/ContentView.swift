@@ -10,26 +10,14 @@ import CodeScanner
 
 struct ContentView: View {
     
-    @State var isPresentingScanner = false
-    @State var scannedCode: String = "Scan QR code to get started"
-    
-    var scannedSheet: some View {
-        CodeScannerView (
-            codeTypes: [.qr],
-            completion:  { result in
-                if case let .success(code) = result {
-                    self.scannedCode = code.string
-                    self.isPresentingScanner = false
-                }
-                
-            }
-        )
-            
-        
-    }
     
     var body: some View {
         TabView {
+            Main()
+            .tabItem {
+                Image(systemName: "creditcard.fill")
+                Text("Wallets")
+            }
             
             QRScanner()
             .tabItem {

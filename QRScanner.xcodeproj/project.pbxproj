@@ -13,6 +13,7 @@
 		A5AA3334278DD1460046B36C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AA3333278DD1460046B36C /* Preview Assets.xcassets */; };
 		A5AA333C278DD2010046B36C /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A5AA333B278DD2010046B36C /* CodeScanner */; };
 		A5AA3340278DE3730046B36C /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA333F278DE3730046B36C /* QRScanner.swift */; };
+		A5AA3342278DFC930046B36C /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA3341278DFC930046B36C /* Main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A5AA3330278DD1460046B36C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5AA3333278DD1460046B36C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5AA333F278DE3730046B36C /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
+		A5AA3341278DFC930046B36C /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				A5AA332C278DD1440046B36C /* QRScannerApp.swift */,
 				A5AA332E278DD1440046B36C /* ContentView.swift */,
 				A5AA333F278DE3730046B36C /* QRScanner.swift */,
+				A5AA3341278DFC930046B36C /* Main.swift */,
 				A5AA3330278DD1460046B36C /* Assets.xcassets */,
 				A5AA3332278DD1460046B36C /* Preview Content */,
 			);
@@ -150,6 +153,7 @@
 			files = (
 				A5AA3340278DE3730046B36C /* QRScanner.swift in Sources */,
 				A5AA332F278DD1440046B36C /* ContentView.swift in Sources */,
+				A5AA3342278DFC930046B36C /* Main.swift in Sources */,
 				A5AA332D278DD1440046B36C /* QRScannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

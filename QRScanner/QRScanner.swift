@@ -42,20 +42,38 @@ struct QRScanner: View {
                 
                 //Нижний бар с кнопками
                 VStack {
-                    HStack(spacing: 20) {
+                    HStack(spacing: 13) {
                         
                         //Сканирование из камеры
                         Button("Scan QR") {
                             self.isPresentingScanner = true
                         }
+                        .foregroundColor(.white)
+                        .font(.system(size: 22))
+                        .padding()
+                        .padding(.horizontal, 27)
+                        .background(Color.green)
+                        .clipShape(RoundedRectangle(cornerRadius: 15 ))
+                        .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3))
+                        
+                        
+                        
                         .sheet(isPresented: $isPresentingScanner) {
                             self.scannedSheet
                             }
+                        
                         
                         //Сканирование с фотографии
                         Button("Select a photo") {
                             
                         }
+                        .font(.system(size: 22))
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.green)
+                        .clipShape(RoundedRectangle(cornerRadius: 15 ))
+                        .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3))
+                        
                     }
                     
                     //Кнопка с пояснениями как и что работает
@@ -63,7 +81,10 @@ struct QRScanner: View {
                         
                     }) {
                         Image(systemName: "questionmark.circle")
-                    }.padding()
+                    }
+                    .foregroundColor(.gray)
+                    .padding(.bottom, 10)
+                    .padding(.top, 5)
                 }
             }.navigationBarTitle("Сканер QR кодов")
             
